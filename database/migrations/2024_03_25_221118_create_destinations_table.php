@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('user_id')->constrained('users');
-            $table->enum('list of places', ['visit', 'activate', 'plats'])->default('visit');
-            $table->string('place of accommodation');
+            $table->enum('list_of_places', ['visit', 'activate', 'plats'])->default('visit');
+            $table->string('place_of_accommodation');
             $table->timestamps();
         });
     }

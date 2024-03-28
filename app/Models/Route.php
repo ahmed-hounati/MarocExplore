@@ -18,8 +18,8 @@ class Route extends Model
         return $this->belongsTo(Category::class, 'category_id', 'id');
     }
 
-    public function destination()
+    public function destinations()
     {
-        return $this->belongsTo(Destination::class, 'destination_id', 'id');
+        return $this->belongsToMany(Destination::class, 'route_destination');
     }
 }
